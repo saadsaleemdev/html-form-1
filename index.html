@@ -24,9 +24,10 @@
           <li>
             <label for="phonenumber">Your Phone Number</label>
             <input
-              type="number"
+              type="tel"
               name="user-phonenumber"
               id="phonenumber"
+              minlength="7"
               required
             />
           </li>
@@ -57,11 +58,17 @@
         <h2>How should we reply</h2>
         <ul>
           <li class="form-control-inline">
-            <input type="radio" name="reply" id="call" value="call" />
+            <input type="radio" name="reply" id="call" value="call" required />
             <label for="call">Call me</label>
           </li>
           <li class="form-control-inline">
-            <input type="radio" name="reply" id="email" value="email" />
+            <input
+              type="radio"
+              name="reply"
+              id="email"
+              value="email"
+              required
+            />
             <label for="email">Send me an email</label>
           </li>
           <li class="form-control-inline">
@@ -70,6 +77,7 @@
               name="reply"
               id="dont-reply"
               value="dont-reply"
+              required
             />
             <label for="dont-reply">Don't Reply</label>
           </li>
@@ -83,6 +91,7 @@
             name="terms"
             id="term-checkbox"
             value="accepted"
+            required
           />
           <label for="term-checkbox">Accept Terms</label>
         </div>
@@ -91,10 +100,10 @@
       <section>
         <ul id="buttons">
           <li>
-            <button type="reset">Clear</button>
+            <button class="btn-empty" type="reset">Clear</button>
           </li>
           <li>
-            <button class="right-btn" type="submit">Submit</button>
+            <button class="btn-filled" type="submit">Submit</button>
           </li>
         </ul>
       </section>
